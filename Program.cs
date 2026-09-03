@@ -8,7 +8,8 @@ List<IFormaGeometrica> formas = new List<IFormaGeometrica>
 foreach (var forma in formas)
 {
     Console.WriteLine(forma.GetType().Name);
-    Console.WriteLine("area: " + forma.CalcularArea());
-    Console.WriteLine("perimetro: " + forma.CalcularPerimetro());
+    // arredonda pra nao mostrar aquela dizima gigante do circulo
+    Console.WriteLine("area: " + Math.Round(forma.CalcularArea(), 2));
+    Console.WriteLine("perimetro: " + Math.Round(forma.CalcularPerimetro(), 2));
     Console.WriteLine();
 }
